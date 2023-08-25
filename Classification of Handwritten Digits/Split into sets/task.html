@@ -1,0 +1,31 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>At this stage, you need to use <code class="java">sklearn</code> to split your data into train and test sets. We will use only a portion of the dataset to process model training faster in the next stage.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Import a necessary tool from <code class="java">sklearn</code>; </li>
+<li>Use the first 6000 rows of the datasets. Set the test set size as <code class="java">0.3</code> and the random seed of <code class="java">40</code> to make your output reproducible;</li>
+<li>Print new datasets' shapes.</li>
+<li>Let's make sure that our dataset is balanced after splitting. Print the proportions of samples per class in the training set as in the example below. We recommend using <code class="java">pd.Series.value_counts(normalize=True)</code>.</li>
+</ol>
+<p>The input of train-test splitting function is two arrays: <code class="java">features</code> and <code class="java">target</code>. The output contains four arrays stored in the following variables: <code class="java">x_train</code> — the features' train set, <code class="java">x_test</code> — the features' test set, <code class="java">y_train</code> — a target variable from the train set, <code class="java">y_test</code> — a target variable from the test set.</p>
+<p>Provide the answers to the questions in the format as shown below.</p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1:</strong> <em>an example of the output</em></p>
+<pre><code class="language-no-highlight">x_train shape: (100, 5)
+x_test shape: (20, 5)
+y_train shape: (100,)
+y_test shape: (20,)
+Proportion of samples per class in train set:
+1    0.05
+7    0.30
+4    0.25
+6    0.04
+0    0.08
+9    0.01
+3    0.13
+2    0.10
+8    0.01
+5    0.03
+dtype: float64</code></pre>
+</div>

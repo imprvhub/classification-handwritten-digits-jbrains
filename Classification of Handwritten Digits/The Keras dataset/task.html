@@ -1,0 +1,25 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>We start by feeding data to our program. We will use the <a href="https://keras.io/api/datasets/mnist/" rel="noopener noreferrer nofollow" target="_blank">MNIST digits dataset</a> from Keras. Make sure to check the link above before you continue reading — it contains information on how to load the dataset.</p>
+<p>Here is a sample of 28x28 images from the dataset:</p>
+<p><img alt="Sample 28x28 images with numbers" height="613" src="https://ucarecdn.com/daa5381b-35fa-40bc-a45f-92898e06d1ad/-/crop/606x613/65,53/-/preview/" width="606"/></p>
+<p>To proceed, we need to figure out how a machine sees pictures. A computer senses an image as a 2D array of pixels. Each pixel has coordinates (x, y) and a value — from 0 (the darkest) to 255 (the brightest).</p>
+<p><img alt="pixel location" height="300" src="https://ucarecdn.com/86dfc68f-d555-4628-859f-46a9f6324d84/" width="359"/></p>
+<p>In machine learning, we need to flatten (convert) an image into one dimension array. This means that a 28x28 image, which is initially a 2D array, transforms into a 1D array with 28x28 = 784 elements in it.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Import <code class="java">tensorflow</code> and <code class="java">numpy</code> to your program. The first one loads the data, the second one transforms it;</li>
+<li>Load the data in your program. You need <code class="java">x_train</code> and <code class="java">y_train</code> only. Skip <code class="java">x_test</code> and <code class="java">y_test</code> in return of <code class="java">load_data()</code>.<br/>
+	Sometimes <code class="java">x_train</code> or <code class="java">x_test</code> will be called <strong>the features array</strong> (because they contain brightnesses of the pixels, which are the images' features). <code class="java">y_train</code> or <code class="java">y_test</code> will be called <strong>the target array</strong> (because they contain classes, digits which we are going to predict);</li>
+<li>Reshape the features array to the 2D array with <span class="math-tex">\(n\)</span> rows (<span class="math-tex">\(n\)</span> = number of images in the dataset) and <span class="math-tex">\(m\)</span> columns (<span class="math-tex">\(m\)</span> = number of pixels in each image);</li>
+<li>Print information about the dataset: target classes' names; the shape of the features array; the shape of the target array; the minimum and maximum values of the features array. Use the following format for the shapes: <code class="java">(the number of rows, the number of columns)</code>.</li>
+</ol>
+<p><strong>Tip:</strong> Look for the numpy <code class="java">.reshape()</code> and <code class="java">.unique()</code> methods in the <a href="https://numpy.org/doc/stable/reference/routines.array-manipulation.html" rel="noopener noreferrer nofollow" target="_blank">official documentation</a>.</p>
+<p>The input is the <a href="https://keras.io/api/datasets/mnist/" rel="noopener noreferrer nofollow" target="_blank">MNIST dataset</a>. The output contains flattened features array. Provide the answers in the same format and order as in the example below. The answers are given for reference only, the actual numbers may differ.</p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1:</strong> <em>an example of the output</em></p>
+<pre><code class="language-no-highlight">Classes: [1 2 3 5 6]
+Features' shape: (200, 100)
+Target's shape: (200,)
+min: 0.0, max: 100.0</code></pre>
+</div>

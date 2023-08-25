@@ -1,0 +1,111 @@
+type: edu
+files:
+- name: analysis.py
+  visible: true
+  text: |
+    import tensorflow as tf
+    import pandas as pd
+    import numpy as np
+    from sklearn.model_selection import train_test_split
+    from sklearn.neighbors import KNeighborsClassifier
+    from sklearn.tree import DecisionTreeClassifier
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.preprocessing import Normalizer
+    from sklearn.metrics import accuracy_score
+    from warnings import simplefilter
+    from sklearn.model_selection import GridSearchCV
+
+    simplefilter(action='ignore', category=FutureWarning)
+
+    (X_train, y_train) = tf.keras.datasets.mnist.load_data(path="mnist.npz")[0]
+    X_train = X_train.reshape(-1, 784)
+    '''
+    #Stage 1/5
+    print(f"Classes: {np.unique(y_train)}")
+    print(f"Features' shape: {X_train.shape}")
+    print(f"Target's shape: {y_train.shape}")
+    print(f"min: {X_train.min()}, max: {X_train.max()}")
+    '''
+    #Stage 2/5
+    X_train, X_test, y_train, y_test = train_test_split(X_train[:6000], y_train[:6000], test_size=0.3, random_state=40)
+
+    print(f"x_train shape: {X_train.shape}")
+    print(f"x_test shape: {X_test.shape}")
+    print(f"y_train shape: {y_train.shape}")
+    print(f"y_test shape: {y_test.shape}")
+    print('Proportion of samples per class in train set:')
+    print(pd.Series(y_train).value_counts(normalize=True))
+  learner_created: false
+- name: test/__init__.py
+  visible: false
+  learner_created: false
+- name: test/tests.py
+  visible: false
+  text: |-
+    from hstest.stage_test import StageTest
+    from hstest.test_case import TestCase
+    from hstest.check_result import CheckResult
+    import re
+
+
+    class CCATest(StageTest):
+
+        def generate(self):
+            return [TestCase(time_limit=1800000)]
+
+        def check(self, reply, attach):
+            lines = reply.split('\n')
+            if "" in lines:
+                lines = list(filter(lambda a: a != "", lines))
+
+            # general
+            lines2check = []
+
+            for item in lines:
+                if any(key_word in item.replace(" ", "").lower() for key_word in ['k-nearest', 'forestalgorithm', 'accuracy']):
+                    lines2check.append(item)
+
+            if len(lines2check) != 4:
+                return CheckResult.wrong(
+                    feedback='Something is wrong with the output format, check the example output at the stage 5')
+
+            # k-nearest neighbours classifier
+            algorithm_name_reply = lines2check[0]
+            accuracy_reply = re.findall(r'\d*\.\d+|\d+', lines2check[1])
+            if len(accuracy_reply) != 1:
+                return CheckResult.wrong(feedback='It should be one number in the "accuracy:" section')
+
+            if not 0.957 <= float(accuracy_reply[0]) < 1:
+                return CheckResult.wrong(
+                    feedback=f"The accuracy for {algorithm_name_reply} is wrong")
+
+            # random forest classifier
+            algorithm_name_reply = lines2check[2]
+            accuracy_reply = re.findall(r'\d*\.\d+|\d+', lines2check[3])
+            if len(accuracy_reply) != 1:
+                return CheckResult.wrong(feedback='It should be one number in the "accuracy:" section')
+
+            if not 0.945 <= float(accuracy_reply[0]) < 1:
+                return CheckResult.wrong(
+                    feedback=f"The accuracy for {algorithm_name_reply} is wrong")
+            return CheckResult.correct()
+
+
+    if __name__ == '__main__':
+        CCATest().run_tests()
+  learner_created: false
+- name: tests.py
+  visible: false
+  text: |-
+    from test.tests import CCATest
+
+    if __name__ == '__main__':    CCATest().run_tests()
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/15237#comment
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Fri, 25 Aug 2023 08:16:32 UTC"
+record: -1

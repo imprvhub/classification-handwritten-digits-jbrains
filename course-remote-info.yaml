@@ -1,0 +1,289 @@
+hyperskill_project:
+  id: 205
+  ide_files: https://cogniterra.org/media/attachments/lesson/25823/additional_files.json
+  is_template_based: false
+  use_ide: true
+  environment: unittest
+update_date: "Fri, 25 Aug 2023 07:31:53 UTC"
+stages:
+- id: 1022
+  step: 15233
+  is_completed: true
+- id: 1023
+  step: 15234
+  is_completed: true
+- id: 1024
+  step: 15235
+  is_completed: true
+- id: 1025
+  step: 15236
+  is_completed: true
+- id: 1026
+  step: 15237
+  is_completed: true
+topics:
+  0:
+  - title: Cartesian coordinates
+    theory_id: 13114
+  - title: Computer algorithms
+    theory_id: 16547
+  - title: IDE
+    theory_id: 10996
+  - title: Introduction to Operating systems
+    theory_id: 9704
+  - title: Command line overview
+    theory_id: 8977
+  - title: Parameters and Options
+    theory_id: 9746
+  - title: "Vectors, matrices, scalars"
+    theory_id: 16969
+  - title: Introduction to matrices
+    theory_id: 7112
+  - title: Intro to NumPy
+    theory_id: 9672
+  - title: Operations with an array
+    theory_id: 10170
+  - title: Intro to Machine Learning
+    theory_id: 10403
+  - title: Typical ML pipeline
+    theory_id: 10411
+  - title: Introduction to Python
+    theory_id: 5204
+  - title: Overview of the basic program
+    theory_id: 5208
+  - title: Multi-line programs
+    theory_id: 5233
+  - title: PEP 8
+    theory_id: 5879
+  - title: Comments
+    theory_id: 6081
+  - title: Load module
+    theory_id: 6019
+  - title: Create module
+    theory_id: 6057
+  - title: Packages
+    theory_id: 6384
+  - title: Pip
+    theory_id: 6230
+  - title: Virtual Environment
+    theory_id: 13923
+  - title: PyCharm basics
+    theory_id: 6193
+  - title: Running Python applications in PyCharm
+    theory_id: 19153
+  - title: How to read the documentation
+    theory_id: 12125
+  - title: Basic data types
+    theory_id: 5852
+  - title: Variables
+    theory_id: 5859
+  - title: Invoking a function
+    theory_id: 5891
+  - title: Integer arithmetic
+    theory_id: 5865
+  - title: Declaring a function
+    theory_id: 5900
+  - title: List
+    theory_id: 5979
+  - title: Type casting
+    theory_id: 6224
+  1:
+  - title: Numerical and categorical data
+    theory_id: 24686
+  - title: Computer programming
+    theory_id: 8739
+  - title: Paradigms
+    theory_id: 15860
+  - title: Taking input
+    theory_id: 5913
+  - title: Naming variables
+    theory_id: 5885
+  - title: Introduction to OOP
+    theory_id: 3614
+  - title: Program with numbers
+    theory_id: 5872
+  - title: If statement
+    theory_id: 5953
+  - title: Else statement
+    theory_id: 5932
+  - title: Class
+    theory_id: 6661
+  - title: Class instances
+    theory_id: 6669
+  - title: For loop
+    theory_id: 6065
+  - title: Methods
+    theory_id: 6931
+  - title: Methods and attributes
+    theory_id: 6981
+  - title: While loop
+    theory_id: 5940
+  - title: Loop control statements
+    theory_id: 6302
+  - title: The Jupyter Notebook
+    theory_id: 12623
+  - title: Google Colab
+    theory_id: 12631
+  - title: Sep and end arguments of print
+    theory_id: 7452
+  - title: Introduction to pandas
+    theory_id: 10416
+  - title: Introduction to sklearn
+    theory_id: 10430
+  - title: Series
+    theory_id: 10421
+  - title: DataFrame
+    theory_id: 10933
+  - title: Train and test sets
+    theory_id: 17181
+  - title: Scopes
+    theory_id: 6322
+  - title: Boolean logic
+    theory_id: 6025
+  - title: Comparisons
+    theory_id: 5920
+  - title: Quotes and multi-line strings
+    theory_id: 5814
+  - title: String formatting
+    theory_id: 6037
+  - title: Arguments
+    theory_id: 7248
+  - title: Basic string methods
+    theory_id: 6842
+  - title: Escape sequences
+    theory_id: 7130
+  - title: Split and join
+    theory_id: 6972
+  - title: Dictionary
+    theory_id: 6481
+  2:
+  - title: What is math?
+    theory_id: 28537
+  - title: Applications of Math
+    theory_id: 28832
+  - title: "Math notations, formulas, and statements"
+    theory_id: 28757
+  - title: Basic concepts
+    theory_id: 26143
+  - title: "Lines, planes and their equations"
+    theory_id: 10660
+  - title: Basics of sets
+    theory_id: 8220
+  - title: Basics of functions
+    theory_id: 8857
+  - title: Properties of functions
+    theory_id: 20683
+  - title: Sample space
+    theory_id: 7309
+  - title: Events
+    theory_id: 7892
+  - title: The concept of probability
+    theory_id: 10538
+  - title: Finding probabilities
+    theory_id: 15797
+  - title: Conditional probability
+    theory_id: 10348
+  - title: Introduction to polynomials
+    theory_id: 11059
+  - title: Introduction to optimization
+    theory_id: 12180
+  - title: Numerical optimization methods
+    theory_id: 19113
+  - title: Gradient Descent
+    theory_id: 18625
+  - title: Properties of numerical functions
+    theory_id: 20704
+  - title: Limits of sequences
+    theory_id: 16743
+  - title: A limit of a function
+    theory_id: 18633
+  - title: One-sided limits and the non-existence of a limit
+    theory_id: 18634
+  - title: Operations with limits
+    theory_id: 11627
+  - title: Introduction to derivatives
+    theory_id: 10822
+  - title: Linear functions
+    theory_id: 18811
+  - title: Derivatives of polynomials
+    theory_id: 11408
+  - title: Derivatives of trigonometric functions
+    theory_id: 11742
+  - title: A composite function and its derivative
+    theory_id: 12037
+  - title: Implicit derivatives
+    theory_id: 12022
+  - title: A derivative of logarithmic functions
+    theory_id: 12029
+  - title: A derivative of exponential functions
+    theory_id: 12014
+  - title: Higher order derivatives
+    theory_id: 12520
+  - title: Local extrema
+    theory_id: 13766
+  - title: Vector operations
+    theory_id: 29446
+  - title: Vector space
+    theory_id: 17805
+  - title: Types of matrices
+    theory_id: 17812
+  - title: Operations with matrices
+    theory_id: 7296
+  - title: Vector norm and distance between vectors
+    theory_id: 33339
+  - title: Vector dot product
+    theory_id: 29680
+  - title: Matrix multiplication
+    theory_id: 7372
+  - title: Multivariable functions
+    theory_id: 12732
+  - title: Partial derivatives
+    theory_id: 13758
+  - title: Linear combinations and linear independence
+    theory_id: 29596
+  - title: Matrix determinant
+    theory_id: 32066
+  - title: Matrix inverse
+    theory_id: 13067
+  - title: Introduction to regression
+    theory_id: 11417
+  - title: Simple linear regression
+    theory_id: 13691
+  - title: Multiple linear regression
+    theory_id: 15563
+  - title: Introduction to classification
+    theory_id: 10942
+  - title: Logistic regression
+    theory_id: 15760
+  - title: Ensemble methods
+    theory_id: 15391
+  - title: Random forest
+    theory_id: 16554
+  - title: Feature scaling
+    theory_id: 28166
+  - title: Introduction to K-Nearest Neighbors
+    theory_id: 25508
+  - title: Training a model with sklearn
+    theory_id: 14678
+  - title: Decision Trees
+    theory_id: 11426
+  - title: Accuracy and confusion matrix
+    theory_id: 11245
+  - title: Decision tree with scikit-learn
+    theory_id: 16405
+  - title: Random forest in scikit-learn
+    theory_id: 16563
+  - title: Logistic regression in scikit-learn
+    theory_id: 15815
+  3:
+  - title: Feature scaling in sklearn
+    theory_id: 28155
+  4:
+  - title: Over- and underfitting
+    theory_id: 22973
+  - title: Cross-validation
+    theory_id: 22981
+  - title: Hyperparameters
+    theory_id: 31498
+  - title: Hyperparameter search in scikit-learn
+    theory_id: 31177

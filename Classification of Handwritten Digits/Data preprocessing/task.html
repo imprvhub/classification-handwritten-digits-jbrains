@@ -1,0 +1,36 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>At this stage, we will improve model performance by preprocessing the data. We will see how normalization affects the accuracy. Recall that normalization scales values of features from 0 to 1.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Import <code class="java">sklearn.preprocessing.Normalizer</code> transformer;</li>
+<li>Initialize the normalizer, transform the features (<code class="java">x_train</code> and <code class="java">x_test</code>), and then save the output to <code class="java">x_train_norm</code> and <code class="java">x_test_norm</code>;</li>
+<li>Repeat steps 2-4 from Stage 3;</li>
+<li>Answer the following questions: 
+	<ul>
+<li>Does the normalization have a positive impact in general? (yes/no)</li>
+<li>Which two models show the best scores?</li>
+</ul>
+	Round the result to the third decimal place and print the accuracy of models in descending order in the format shown below.</li>
+</ol>
+<p>The normalizer's inputs includes train and test sets from Stage 2. The output consists of the preprocessed train and test sets.</p>
+<p>Make sure your output format matches the example below.</p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1:</strong> <em>an example of the output</em></p>
+<pre><code class="language-no-highlight">Model: FriendsClassifier()
+Accuracy: 0.9945
+
+Model: DecisionFlowerClassifier(random_state=40)
+Accuracy: 0.9854
+
+Model: HeuristicRegression()
+Accuracy: 0.97
+
+Model: RandomFlowerbedClassifier(random_state=40)
+Accuracy: 0.96
+
+The answer to the 1st question: no
+
+The answer to the 2nd question: FriendsClassifier-0.995, RandomFlowerClassifier-0.985
+</code></pre>
+</div>

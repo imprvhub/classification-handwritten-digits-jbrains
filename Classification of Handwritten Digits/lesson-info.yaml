@@ -1,0 +1,8 @@
+type: framework
+content:
+- The Keras dataset
+- Split into sets
+- Train models with default settings
+- Data preprocessing
+- Hyperparameter tuning
+current_task: 4

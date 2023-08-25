@@ -1,0 +1,30 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>In the final stage, you need to improve model performance by tuning <a href="https://machinelearningmastery.com/difference-between-a-parameter-and-a-hyperparameter/" rel="noopener noreferrer nofollow" target="_blank">the hyperparameters</a>. No need to do it manually, as <code class="java">sklearn</code> has convenient tools for this task. We advise using <code class="java">GridSearchCV</code>. It searches through the specified parameter values for an estimator. Basically, it takes <code class="java">estimator</code>, <code class="java">param_grid</code>, and <code class="java">scoring</code> as arguments. You can read about them in <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html" rel="noopener noreferrer nofollow" target="_blank">the documentation</a>. As a starting point, you will be provided with a list of parameters to find a better set than the default one.</p>
+<p>We urge you to try more parameter values to improve the result. The test system has minimum requirements on the algorithms and their accuracies. It can pass only two algorithms (K-nearest Neighbors and Random Forest) that performed in the best possible way in the previous stage. Concerning the scores, the test system requires values that can be achieved by finding the best set of parameters from the lists below.</p>
+<p>Are you the one with the highest accuracy? Share your scores and the most efficient sets of parameters in the comments!</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Choose a data representation that performed the best. You need to choose between the initial dataset and the one with normalized features. You also take only two models with the highest accuracy;</li>
+<li>Initialize <code class="java">GridSearchCV(estimator=..., param_grid=..., scoring='accuracy', n_jobs=-1)</code> to search over the following parameters:
+	<ul>
+<li>For the K-nearest Neighbors classifier: <code class="java">n_neighbors = [3, 4]</code>, <code class="java">weights = ['uniform', 'distance']</code>, <code class="java">algorithm = ['auto', 'brute']</code></li>
+<li>For the Random Forest classifier: <code class="java">n_estimators = [300, 500]</code>, <code class="java">max_features = ['auto', 'log2']</code>, <code class="java">class_weight = ['balanced', 'balanced_subsample']</code>. Don't forget to set<code class="java"> random_state=40</code> in the Random Forest classifier!</li>
+</ul>
+<p>Note that <code class="java">njobs</code> parameter is responsible for the number of jobs that will be run in parallel. Set <code class="java">njobs=-1</code> to use all processors;</p>
+</li>
+<li>Run the <code class="java">fit</code> method for <code class="java">GridSearchCV</code>. Use the train set only. Since a number of models (one of two algorithms with a set of parameter values is one model) must be trained to compare the performances, this step will take about 30 minutes;</li>
+<li>Print the best sets of parameters for both algorithms. You can get this information in the attribute called <code class="java">best_estimator_</code> of each algorithm's<code class="java"> GridSearchCV</code> instance. Train two best estimators on the test set and print their accuracies.</li>
+</ol>
+<p>The input includes the train and test sets. The output consists of two classifiers that perform better than the ones from the previous stage. Provide the answer in the format shown below. The values are given for reference only, the actual numbers may be different.</p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1:</strong> <em>an example of your output</em></p>
+<pre><code class="language-no-highlight">K-nearest neighbours algorithm
+best estimator: KNeighborsClassifier(n_neighbors=5, weights='uniform')
+accuracy: 1
+
+Random forest algorithm
+best estimator: RandomForestClassifier(class_weight=None, max_features='auto',
+                       n_estimators=100, random_state=40)
+accuracy: 1</code></pre>
+</div>

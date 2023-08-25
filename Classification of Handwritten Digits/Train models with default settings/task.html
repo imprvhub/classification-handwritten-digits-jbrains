@@ -1,0 +1,51 @@
+<div class="step-text">
+<h5 id="description">Description</h5>
+<p>We are ready to train our models. In this stage, you need to find the best algorithm that can identify handwritten digits. Refer to the following algorithms: <strong>K-nearest Neighbors</strong>, <strong>Decision Tree</strong>, <strong>Logistic Regression</strong>, and <strong>Random Forest</strong>. In this stage, you need to train these four classifiers with default parameters. In the next stages, we will try to improve their performances. We will use<strong> an accuracy</strong> metric to evaluate the models.</p>
+<h5 id="objectives">Objectives</h5>
+<ol>
+<li>Import <code class="language-python">sklearn</code> implementations of the classifiers and the accuracy scorer;</li>
+<li>Since you are going to train a lot of models, implementing the following function will make the process fast and convenient:
+	<pre><code class="language-python"># the function
+def fit_predict_eval(model, features_train, features_test, target_train, target_test):
+    # here you fit the model
+    # make a prediction
+    # calculate accuracy and save it to score
+    print(f'Model: {model}\nAccuracy: {score}\n')
+
+
+# example
+# code
+fit_predict_eval(
+        model=KNeighborsClassifier(),
+        features_train=x_train,
+        features_test=x_test,
+        target_train=y_train,
+        target_test=y_test
+    )
+# output
+# &gt;&gt;&gt; Model: KNeighborsClassifier()
+# &gt;&gt;&gt; Accuracy: 0.1234</code></pre>
+</li>
+<li>Initialize the models. Some of the algorithms have randomness, so you need to set <code class="language-python">random_state=40</code> to receive reproducible results;</li>
+<li>Fit the models;</li>
+<li>Make predictions and print the accuracies. Make sure that the program prints the models and their results in the following order: K-nearest Neighbors, Decision Tree, Logistic Regression, and Random Forest;</li>
+<li>Which model performs better? Print the answer. Round the result to the third decimal place.</li>
+</ol>
+<p>The models' input includes the train and test sets, which you got in the previous stage. The output consists of the trained models.</p>
+<p>Make sure your output format matches the example below.</p>
+<h5 id="example">Example</h5>
+<p><strong>Example 1:</strong> <em>an example of the output</em></p>
+<pre><code class="language-no-highlight">Model: FriendsClassifier()
+Accuracy: 0.4321
+
+Model: DecisionFlowerClassifier(random_state=40)
+Accuracy: 0.6543
+
+Model: HeuristicRegression()
+Accuracy: 0.9876
+
+Model: RandomFlowerbedClassifier(random_state=40)
+Accuracy: 0.7654
+
+The answer to the question: HeuristicRegression - 0.988</code></pre>
+</div>
